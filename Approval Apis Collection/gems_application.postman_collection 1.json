@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "1a0c3212-9b82-4d02-93b0-de5dc1247e52",
+		"name": "gems_application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29291141",
+		"_collection_link": "https://planetary-zodiac-783755.postman.co/workspace/New-Team-Workspace~253d32d1-961b-47c4-a9de-0a8fb5eeda3f/collection/29291141-1a0c3212-9b82-4d02-93b0-de5dc1247e52?action=share&source=collection_link&creator=29291141"
+	},
+	"item": [
+		{
+			"name": "insert_application",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empId\": 1313,\r\n    \"requestRaisedDatetime\": \"2020-03-19\",\r\n    \"actionDatetime\": \"2020-03-19T18:30:00Z\",\r\n    \"flowName\": \"applicant-gems\",\r\n    \"status\": \"pending\",\r\n    \"description\": \"this is description1\",\r\n    \"approvalReason\": \"\",\r\n    \"rejectionReason\": \"\",\r\n    \"justification\": \"\",\r\n    \"comment\":\"\",\r\n    \"remark\":\"\",\r\n    \"projectId\":2,\r\n    \"attachment\":\"abc\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/gems/apply-gemsapplication/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_gems_application",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 1313,\n    \"flowName\": \"applicant-gems\"\n   \n}"
+				},
+				"url": "http://127.0.0.1:8000/gems/apply-gemsapplication/"
+			},
+			"response": []
+		},
+		{
+			"name": "update_gems_application",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"applicantionRequestID\":15,\r\n\"attachment\":\"Resume\",\r\n    \"approvalEngUniqueID_id\": 7,\r\n    \"status\": \"Pending\",\r\n    \"actionby\": 1111,\r\n    \"approvalReason\": \"new1\",\r\n    \"rejectionReason\": \"new\",\r\n    \"description\": \"new\",\r\n    \"justification\": \"new\",\r\n    \"remarks\": \"new\",\r\n    \"comments\": \"new\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/gems/gemsapplication-approver/"
+			},
+			"response": []
+		},
+		{
+			"name": "get_gems_approver_applications",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 1444,\n    \"flowName\": \"applicant-gems\"\n\n \n}"
+				},
+				"url": "http://127.0.0.1:8000/gems/gemsapplication-approver/"
+			},
+			"response": []
+		}
+	]
+}

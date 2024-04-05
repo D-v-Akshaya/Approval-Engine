@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "cb3d6ba3-1895-48c6-a878-43822719d9d7",
+		"name": "flow-hirarchy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29291141",
+		"_collection_link": "https://planetary-zodiac-783755.postman.co/workspace/New-Team-Workspace~253d32d1-961b-47c4-a9de-0a8fb5eeda3f/collection/29291141-cb3d6ba3-1895-48c6-a878-43822719d9d7?action=share&source=collection_link&creator=29291141"
+	},
+	"item": [
+		{
+			"name": "get_flow",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    // \"flowName\":\"leave\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/flow"
+			},
+			"response": []
+		},
+		{
+			"name": "post_flow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"flowName\":\"applicant-gems\"\n    }"
+				},
+				"url": "http://127.0.0.1:8000/flow"
+			},
+			"response": []
+		},
+		{
+			"name": "get_flow_hirarchy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"flowName\":\"pg-gems\"\n    }"
+				},
+				"url": "http://127.0.0.1:8000/flow_hirarchy"
+			},
+			"response": []
+		},
+		{
+			"name": "update_flow_hirarchy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"flowName\":\"leave\",\n    \"empId\":1212,\n    \"hirarchy\":1\n    }"
+				},
+				"url": "http://127.0.0.1:8000/flow_hirarchy"
+			},
+			"response": []
+		},
+		{
+			"name": "insert_flow_hirarchy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"flowName\":\"applicant-gems\",\n    \"hirarchy\":[\n        {\n            \"empId\":1444,\n            \"hirarchy\":1\n         },\n         {\n            \"empId\":2131,\n            \"hirarchy\":2\n         },\n         {\n            \"empId\":3232,\n            \"hirarchy\":3\n         },\n         {\n            \"empId\":4545,\n            \"hirarchy\":4\n         },\n         {\n            \"empId\":5555,\n            \"hirarchy\":5\n         }\n         ]\n    }"
+				},
+				"url": "http://127.0.0.1:8000/flow_hirarchy"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "b95ca610-4123-42d0-9b8a-0d0baf022634",
+		"name": "approval_engine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29291141",
+		"_collection_link": "https://planetary-zodiac-783755.postman.co/workspace/New-Team-Workspace~253d32d1-961b-47c4-a9de-0a8fb5eeda3f/collection/29291141-b95ca610-4123-42d0-9b8a-0d0baf022634?action=share&source=collection_link&creator=29291141"
+	},
+	"item": [
+		{
+			"name": "insert-application",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHTzI0ODczLkFLU0hBWUEuU0hBMjU2Ono3c1AxWFJnUXhUTnhNZkU3cFN4Wk5wbGRMeEdzZkh0YmljN1RNejRjb1E9Iiwic3ViIjoiR08yNDg3My5BS1NIQVlBIiwiaWF0IjoxNjk4MzI0MzEyLCJleHAiOjE2OTgzMjc4NTJ9.ql4JNSjn1ZT2ejX7BoIeuY9j2VIOugPMpQmD-24wqub5RIOWhhZPyFqJPIijwR3t4w3BmKEdAdWUvmzb0qqlKl-stGsh8SdOc6dRQIBQR8nBWxI3gzUElLVGa-lvu4uE1QZrU49tGUEmXb1sYYZ_BzyDY0gYrwjLknO_kh4gOvsSMmj5ulJXsZMMFi472H7CRHW8X95ZWKpHvQS7dFHSqdGB9LjTyhx-vhVg8J_vMUPfnlOfxFLdgCV6SAo2XGq_T1Lfa1z4YunBKeyupYCu2PFyN3tUVjlXjaogFeyDaTrahaCZkzt8Idm-YYUO2nn_dIOFDnURNNvsgtojWqzxcA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \r\n        \"empId\": 7929,\r\n        \"requestRaisedDatetime\": \"2020-03-19\",\r\n        \"flowName\":\"resignation\",\r\n        \"status\":\"Approved\",\r\n        \"description\":\"this is description1\",\r\n        \"approvalReason\":\"\",\r\n        \"rejectionReason\":\"\",\r\n        \"justification\":\"\",\r\n        \"comment\":\"\",\r\n        \"remark\":\"\",\r\n        \"positionCode\":\"\",\r\n        \"extrakey\":{\"status\":{\r\n            \"wave-off\":\"34\",\r\n            \"wave-of-date\":\"356475876\"\r\n        },\r\n        \"justification\":{\r\n            \"wave-of-reason\":\"dfghnbvcxdfilwhkejvfcwuico kl\"\r\n        }\r\n        }\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/applicant"
+			},
+			"response": []
+		},
+		{
+			"name": "get-applicant-data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHTzI0ODczLkFLU0hBWUEuU0hBMjU2Ono3c1AxWFJnUXhUTnhNZkU3cFN4Wk5wbGRMeEdzZkh0YmljN1RNejRjb1E9Iiwic3ViIjoiR08yNDg3My5BS1NIQVlBIiwiaWF0IjoxNjk4MzI0MzEyLCJleHAiOjE2OTgzMjc4NTJ9.ql4JNSjn1ZT2ejX7BoIeuY9j2VIOugPMpQmD-24wqub5RIOWhhZPyFqJPIijwR3t4w3BmKEdAdWUvmzb0qqlKl-stGsh8SdOc6dRQIBQR8nBWxI3gzUElLVGa-lvu4uE1QZrU49tGUEmXb1sYYZ_BzyDY0gYrwjLknO_kh4gOvsSMmj5ulJXsZMMFi472H7CRHW8X95ZWKpHvQS7dFHSqdGB9LjTyhx-vhVg8J_vMUPfnlOfxFLdgCV6SAo2XGq_T1Lfa1z4YunBKeyupYCu2PFyN3tUVjlXjaogFeyDaTrahaCZkzt8Idm-YYUO2nn_dIOFDnURNNvsgtojWqzxcA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empId\":7929,\r\n    \"flowName\":\"resignation\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/applicant"
+			},
+			"response": []
+		},
+		{
+			"name": "delete-applicant-data",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"connection": true,
+					"accept-encoding": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHTzI0ODczLkFLU0hBWUEuU0hBMjU2Ono3c1AxWFJnUXhUTnhNZkU3cFN4Wk5wbGRMeEdzZkh0YmljN1RNejRjb1E9Iiwic3ViIjoiR08yNDg3My5BS1NIQVlBIiwiaWF0IjoxNjk4MzI0MzEyLCJleHAiOjE2OTgzMjc4NTJ9.ql4JNSjn1ZT2ejX7BoIeuY9j2VIOugPMpQmD-24wqub5RIOWhhZPyFqJPIijwR3t4w3BmKEdAdWUvmzb0qqlKl-stGsh8SdOc6dRQIBQR8nBWxI3gzUElLVGa-lvu4uE1QZrU49tGUEmXb1sYYZ_BzyDY0gYrwjLknO_kh4gOvsSMmj5ulJXsZMMFi472H7CRHW8X95ZWKpHvQS7dFHSqdGB9LjTyhx-vhVg8J_vMUPfnlOfxFLdgCV6SAo2XGq_T1Lfa1z4YunBKeyupYCu2PFyN3tUVjlXjaogFeyDaTrahaCZkzt8Idm-YYUO2nn_dIOFDnURNNvsgtojWqzxcA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"approvalEngUniqueID_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/applicant"
+			},
+			"response": []
+		},
+		{
+			"name": "get-approval-data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHTzI0ODczLkFLU0hBWUEuU0hBMjU2Ono3c1AxWFJnUXhUTnhNZkU3cFN4Wk5wbGRMeEdzZkh0YmljN1RNejRjb1E9Iiwic3ViIjoiR08yNDg3My5BS1NIQVlBIiwiaWF0IjoxNjk4MzI0MzEyLCJleHAiOjE2OTgzMjc4NTJ9.ql4JNSjn1ZT2ejX7BoIeuY9j2VIOugPMpQmD-24wqub5RIOWhhZPyFqJPIijwR3t4w3BmKEdAdWUvmzb0qqlKl-stGsh8SdOc6dRQIBQR8nBWxI3gzUElLVGa-lvu4uE1QZrU49tGUEmXb1sYYZ_BzyDY0gYrwjLknO_kh4gOvsSMmj5ulJXsZMMFi472H7CRHW8X95ZWKpHvQS7dFHSqdGB9LjTyhx-vhVg8J_vMUPfnlOfxFLdgCV6SAo2XGq_T1Lfa1z4YunBKeyupYCu2PFyN3tUVjlXjaogFeyDaTrahaCZkzt8Idm-YYUO2nn_dIOFDnURNNvsgtojWqzxcA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\":2222,\n    \"flowName\":\"leave\"\n    // \"approvalEngUniqueID_id\":82\n}"
+				},
+				"url": "http://127.0.0.1:8000/approver"
+			},
+			"response": []
+		},
+		{
+			"name": "update-approvaldata",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"approvalEngUniqueID_id\": 1,\n    \"status\": \"cannotrejected67437239\",\n    \"actionby\": 1212,\n    \"approvalReason\": \"2222222222222222222ei\",\n    \"rejectionReason\": \"rejectwebiwevbbiwev v22222\",\n    \"description\": \"bcebc iebcwe iwe22222\",\n    \"justification\": \"wbciwbweib wi i1122\",\n    \"remarks\": \"iwbcbwiw9c 0incowicn22222\",\n    \"comments\": \"wjebcwic vwibc wic 222222i\"\n}"
+				},
+				"url": "http://127.0.0.1:8000/approver"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "8918a5c4-6d57-4ceb-b920-19b43d32dc7a",
+		"name": "approval_flow_status",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29291141",
+		"_collection_link": "https://planetary-zodiac-783755.postman.co/workspace/New-Team-Workspace~253d32d1-961b-47c4-a9de-0a8fb5eeda3f/collection/29291141-8918a5c4-6d57-4ceb-b920-19b43d32dc7a?action=share&source=collection_link&creator=29291141"
+	},
+	"item": [
+		{
+			"name": "creating sp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/sp"
+			},
+			"response": []
+		}
+	]
+}

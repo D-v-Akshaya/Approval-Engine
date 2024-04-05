@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "e016b2f8-6e9b-419d-9c19-83b110f3a3c0",
+		"name": "emp-leave",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29291141",
+		"_collection_link": "https://planetary-zodiac-783755.postman.co/workspace/New-Team-Workspace~253d32d1-961b-47c4-a9de-0a8fb5eeda3f/collection/29291141-e016b2f8-6e9b-419d-9c19-83b110f3a3c0?action=share&source=collection_link&creator=29291141"
+	},
+	"item": [
+		{
+			"name": "update-leave",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"approvalEngUniqueID_id\": 5,\n    \"status\": \"Pending\",\n    \"actionby\": 1111,\n    \"approvalReason\": \"new1\",\n    \"rejectionReason\": \"new\",\n    \"description\": \"new\",\n    \"justification\": \"new\",\n    \"remarks\": \"new\",\n    \"comments\": \"new\"\n    }"
+				},
+				"url": "http://127.0.0.1:8000/leave/leave-approver/"
+			},
+			"response": []
+		},
+		{
+			"name": "insert-leave",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 1313,\n    \"requestRaisedDatetime\": \"2020-03-19T18:30:00Z\",\n    \"actionDatetime\": \"2020-03-19T18:30:00Z\",\n    \"flowName\": \"leave\",\n    \"status\": \"pending\",\n    \"description\": \"this is description1\",\n    \"approvalReason\": \"\",\n    \"rejectionReason\": \"\",\n    \"justification\": \"\",\n    \"comment\":\"\",\n    \"remark\":\"\",\n    \"positionCode\":\"\",\n    \"requestRaisedBy\":\"\",\n    \"actualRequestDatetime\":\"2020-03-19T18:30:00Z\",\n    \"lwdPerPolicy\":\"\",\n    \"lwdRequested\":\"\",\n    \"npDays\":0,\n    \"npShortfallDays\":3,\n    \"recoveryAmount\":233,\n    \"shortfallDays\":7,\n    \"tataGrpJoiningDate\":\"2020-03-19T18:30:00Z\",\n    \"tmlGrpJoiningDate\":\"2020-03-19T18:30:00Z\",\n    \"IsPosted\":false,\n    \"attachment\":\"\"\n\n \n}"
+				},
+				"url": "http://127.0.0.1:8000/leave/applyleaves/"
+			},
+			"response": []
+		},
+		{
+			"name": "get-approver-leave",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 2222,\n    \"flowName\": \"leave\"\n\n \n}"
+				},
+				"url": "http://127.0.0.1:8000/leave/leave-approver/"
+			},
+			"response": []
+		},
+		{
+			"name": "get-emp-leave",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJHTzI0ODczLkFLU0hBWUEuU0hBMjU2Ono3c1AxWFJnUXhUTnhNZkU3cFN4Wk5wbGRMeEdzZkh0YmljN1RNejRjb1E9Iiwic3ViIjoiR08yNDg3My5BS1NIQVlBIiwiaWF0IjoxNjk4MzI0MzEyLCJleHAiOjE2OTgzMjc4NTJ9.ql4JNSjn1ZT2ejX7BoIeuY9j2VIOugPMpQmD-24wqub5RIOWhhZPyFqJPIijwR3t4w3BmKEdAdWUvmzb0qqlKl-stGsh8SdOc6dRQIBQR8nBWxI3gzUElLVGa-lvu4uE1QZrU49tGUEmXb1sYYZ_BzyDY0gYrwjLknO_kh4gOvsSMmj5ulJXsZMMFi472H7CRHW8X95ZWKpHvQS7dFHSqdGB9LjTyhx-vhVg8J_vMUPfnlOfxFLdgCV6SAo2XGq_T1Lfa1z4YunBKeyupYCu2PFyN3tUVjlXjaogFeyDaTrahaCZkzt8Idm-YYUO2nn_dIOFDnURNNvsgtojWqzxcA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\":1313,\n    \"flowName\":\"leave\"\n}"
+				},
+				"url": "http://127.0.0.1:8000/leave/applyleaves/"
+			},
+			"response": []
+		}
+	]
+}

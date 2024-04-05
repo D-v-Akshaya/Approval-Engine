@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "3b38c78c-c50c-4073-a678-7fbd7076773c",
+		"name": "gems-Project-Generation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29291141",
+		"_collection_link": "https://planetary-zodiac-783755.postman.co/workspace/New-Team-Workspace~253d32d1-961b-47c4-a9de-0a8fb5eeda3f/collection/29291141-3b38c78c-c50c-4073-a678-7fbd7076773c?action=share&source=collection_link&creator=29291141"
+	},
+	"item": [
+		{
+			"name": "project-generate-post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 76767,\n    \"requestRaisedDatetime\": \"2020-03-19\",\n    \"actionDatetime\": \"2020-03-19T18:30:00Z\",\n    \"flowName\": \"pg-gems\",\n    \"status\": \"pending\",\n    \"description\": \"Employees description\",\n    \"approvalReason\": \"\",\n    \"rejectionReason\": \"\",\n    \"justification\": \"\",\n    \"comment\":\"\",\n    \"remark\":\"\",\n    \"positionCode\":\"\",\n    \"requestRaisedBy\":1111,\n    \"actualRequestDatetime\":\"2020-03-19\",\n    \"lwdPerPolicy\":\"\",\n    \"lwdRequested\":\"\",\n    \"npDays\":0,\n    \"npShortfallDays\":3,\n    \"recoveryAmount\":233,\n    \"shortfallDays\":7,\n    \"tataGrpJoiningDate\":\"2020-03-19\",\n    \"tmlGrpJoiningDate\":\"2020-03-19\",\n    \"IsPosted\":false,\n    \"attachment\":\"\",\n    \"pgtitle\":\"Demo1\",\n    \"pgdescription\":\"shcvsdcuwc wcubw\",\n    \"skills\":{\"lang\":\"html\"}\n    \n\n}"
+				},
+				"url": "http://127.0.0.1:8000/gems/project-generate/"
+			},
+			"response": []
+		},
+		{
+			"name": "project-generator-get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 76767,\n    \"flowName\": \"pg-gems\"\n}"
+				},
+				"url": "http://127.0.0.1:8000/gems/project-generate/"
+			},
+			"response": []
+		},
+		{
+			"name": "project-approver-get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 1111,\n    \"flowName\": \"pg-gems\"\n}"
+				},
+				"url": "http://127.0.0.1:8000/gems/project-approver/"
+			},
+			"response": []
+		},
+		{
+			"name": "project-approver-update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"approvalEngUniqueID_id\": 11,\n    // \"flowName\":\"pg-gems\",\n    \"status\": \"Approved\",\n    \"actionby\": 2222,\n    \"approvalReason\": \"new1\",\n    \"rejectionReason\": \"new-reject\",\n    \"description\": \"new\",\n    \"justification\": \"new\",\n    \"remarks\": \"new\",\n    \"comments\": \"new\",\n    \"pgtitle\":\"Demo3\",\n    \"skills\":{\"lang\":\"html,css,javascript\"},\n    \"pgdescription\":\"Approval engine project\",\n    \"empId\":7867,\n    \"pgId\":6\n\n    }"
+				},
+				"url": "http://127.0.0.1:8000/gems/project-approver/"
+			},
+			"response": []
+		}
+	]
+}
